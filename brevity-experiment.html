@@ -1,0 +1,634 @@
+<title>The Brevity Experiment</title>
+<style>
+  :root {
+    --paper:      #F6F7F9;
+    --surface:    #FFFFFF;
+    --ink:        #13171E;
+    --ink-2:      #4A515D;
+    --ink-3:      #767E8C;
+    --rule:       #DCE0E7;
+    --rule-soft:  #E9ECF1;
+    --accent:     #2F5AC4;
+    --accent-dim: #EAEFFB;
+    --crit:       #B3382B;
+    --warn:       #9A6B1E;
+    --ok:         #256B4E;
+    --crit-bg:    #F9EBE9;
+    --warn-bg:    #F8F1E3;
+    --ok-bg:      #E8F2ED;
+
+    --serif: "Iowan Old Style", "Charter", "Bitstream Charter", Georgia, "Times New Roman", serif;
+    --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+    --measure: 66ch;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #0E1116;
+      --surface:    #161A21;
+      --ink:        #E7EAF0;
+      --ink-2:      #A3ABB9;
+      --ink-3:      #7B838F;
+      --rule:       #272D37;
+      --rule-soft:  #1E232B;
+      --accent:     #86A6F2;
+      --accent-dim: #1A2436;
+      --crit:       #E58275;
+      --warn:       #D6A254;
+      --ok:         #63BD95;
+      --crit-bg:    #2A1A18;
+      --warn-bg:    #271F13;
+      --ok-bg:      #14261F;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #0E1116;
+    --surface:    #161A21;
+    --ink:        #E7EAF0;
+    --ink-2:      #A3ABB9;
+    --ink-3:      #7B838F;
+    --rule:       #272D37;
+    --rule-soft:  #1E232B;
+    --accent:     #86A6F2;
+    --accent-dim: #1A2436;
+    --crit:       #E58275;
+    --warn:       #D6A254;
+    --ok:         #63BD95;
+    --crit-bg:    #2A1A18;
+    --warn-bg:    #271F13;
+    --ok-bg:      #14261F;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 72px 32px 128px;
+  }
+
+  .masthead { border-bottom: 2px solid var(--ink); padding-bottom: 28px; }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 20px;
+  }
+
+  h1 {
+    font-size: clamp(2.3rem, 5.5vw, 3.4rem);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+
+  .standfirst {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+    max-width: var(--measure);
+    margin: 0;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr);
+    gap: 40px;
+    padding: 44px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: start;
+  }
+
+  .rail {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding-top: 9px;
+    position: sticky;
+    top: 24px;
+  }
+
+  .body { max-width: var(--measure); min-width: 0; }
+
+  h2 {
+    font-size: 1.6rem;
+    line-height: 1.22;
+    letter-spacing: -0.012em;
+    font-weight: 600;
+    margin: 0 0 16px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    font-weight: 600;
+    margin: 32px 0 12px;
+  }
+
+  p { margin: 0 0 16px; }
+  p:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; }
+
+  code {
+    font-family: var(--mono);
+    font-size: .855em;
+    background: var(--rule-soft);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  .claim {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    padding: 24px 26px;
+    margin: 0 0 24px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .claim p { margin: 0; }
+
+  .scroll { overflow-x: auto; margin: 20px 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 10.5px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-bottom: 1px solid var(--ink);
+    padding: 0 14px 8px 0;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 10px 14px 10px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+    color: var(--ink-2);
+  }
+
+  td:first-child { color: var(--ink); font-weight: 600; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; padding-right: 0; white-space: nowrap; }
+  th.num { text-align: right; padding-right: 0; }
+
+  .chip {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .chip.no  { color: var(--crit); background: var(--crit-bg); }
+  .chip.mid { color: var(--warn); background: var(--warn-bg); }
+  .chip.yes { color: var(--ok);   background: var(--ok-bg); }
+
+  /* requirement blocks — R1..R4 are a graded hierarchy, so they carry marks */
+  .req {
+    border-top: 1px solid var(--rule);
+    padding: 22px 0 4px;
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 18px;
+  }
+  .req:first-of-type { border-top: 1px solid var(--ink); }
+  .req .mark {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: .04em;
+    padding-top: 3px;
+  }
+  .req h4 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .req p { margin: 0 0 10px; font-size: .97rem; }
+  .req .test {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: var(--ink-3);
+    border-left: 2px solid var(--rule);
+    padding-left: 14px;
+    margin: 12px 0 0;
+  }
+
+  ul.plain { margin: 0 0 16px; padding-left: 20px; }
+  ul.plain li { margin-bottom: 10px; }
+  ul.plain li:last-child { margin-bottom: 0; }
+
+  .note {
+    border-left: 2px solid var(--rule);
+    padding-left: 18px;
+    color: var(--ink-2);
+    font-size: .96rem;
+    margin: 20px 0 0;
+  }
+
+  .caption {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    line-height: 1.5;
+    margin: 8px 0 0;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .06em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 48px 20px 88px; }
+    section { grid-template-columns: 1fr; gap: 14px; padding: 34px 0; }
+    .rail { position: static; padding-top: 0; }
+    .req { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">Method note &middot; Compression and model quality</p>
+    <h1>The Brevity Experiment</h1>
+    <p class="standfirst">A theory about two channels, a design that can separate them, and the properties a benchmark must have before it can measure any of this at all.</p>
+  </header>
+
+  <section>
+    <div class="rail">Theory</div>
+    <div class="body">
+      <h2>Two channels, not one budget</h2>
+      <p>A model has an internal channel and an external one. It reasons, then it speaks. Most discussion of &ldquo;shorter outputs&rdquo; collapses these into a single budget &mdash; spend fewer tokens, get a worse answer &mdash; and that framing makes the interesting question invisible.</p>
+      <div class="claim">
+        <p>Let the reasoning run unbounded. Constrain only what the model is permitted to say. Does the quality of the answer survive &mdash; and might it improve?</p>
+      </div>
+      <p>This is a familiar human condition rather than an exotic one. Working in a second language, the thinking runs at full speed while the output channel is narrow. You cannot perform the fluent version, so you are forced to decide what actually matters before you open your mouth. The constraint is not a handicap applied to the thought; it is a discipline applied to the expression. The question is whether that discipline transfers.</p>
+      <p>Language is unusual in permitting this. Compression in most generated media degrades the artifact &mdash; a smaller image holds less, a shorter program does less. Language has enough redundancy that a paragraph can often survive being reduced to a sentence, provided the compression spends effort rather than merely dropping words.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="rail">Mechanism</div>
+    <div class="body">
+      <h2>Why compression might help</h2>
+      <p>The theory needs a mechanism, or it is only a preference. There are three plausible ones, and they make different predictions &mdash; which is useful, because a well-designed experiment can tell them apart.</p>
+
+      <h3>Hedging suppression</h3>
+      <p>Verbose output carries caveats, qualifications, and both-sides framing. Some of that is genuine uncertainty; much of it is the model declining to commit. An instruction that bans hedging <em>language</em> may also ban the hedged <em>judgement</em>, because the model can no longer express a non-answer. Prediction: compression should most improve tasks where over-caution is the dominant failure &mdash; and should show up as a shift away from the &ldquo;uncertain&rdquo; response category.</p>
+
+      <h3>Forced selection</h3>
+      <p>Saying everything requires no decision about what matters. A tight budget makes relevance-ranking mandatory, and ranking is itself a reasoning step that verbose output permits you to skip. Prediction: compression should help most where the input is rich and the relevant subset is small.</p>
+
+      <h3>Cleaner self-conditioning</h3>
+      <p>Generation is autoregressive: every token the model emits becomes context it conditions on next. Padding, restatement and throat-clearing are therefore not free &mdash; the model spends subsequent attention on its own filler. Denser output means the running context carries a higher proportion of signal. Prediction: the effect should compound with conversation length, and be largest in multi-turn settings.</p>
+
+      <h3>And why it might not</h3>
+      <ul class="plain">
+        <li><strong>Output as scratchpad.</strong> If the model is computing <em>in</em> its visible text, shortening it removes working memory rather than filler. This is the mechanism most likely to be mistaken for a real result, and the design below exists largely to rule it out.</li>
+        <li><strong>Genuine information loss.</strong> Some content needs the words. A safety instruction that gets compressed out of existence is a real quality loss, not a stylistic one.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="rail">Design</div>
+    <div class="body">
+      <h2>What the experiment has to do</h2>
+      <p>Four commitments, each ruling out a specific way of being fooled.</p>
+
+      <h3>Separate the channels, then hold one still</h3>
+      <p>Reasoning depth is pinned to a fixed setting in every arm. The only difference between arms is one instruction about speech. If reasoning is left to float, the model may simply think less when told to say less, and the result measures a smaller total computation rather than a narrower output channel.</p>
+
+      <h3>Verify the manipulation before reading the result</h3>
+      <p>Two numbers are checked first, and neither is a finding: output tokens must fall, and reasoning tokens must not. This is what makes the claim a claim about expression. If both fall together, the experiment is void &mdash; whatever the quality numbers say.</p>
+      <div class="claim" style="font-size:1rem;">
+        <p><strong>This is a harness requirement, not a benchmark property.</strong> No benchmark can observe a model&rsquo;s hidden reasoning; separate reasoning- and output-token accounting comes from the model API and the evaluation harness. Checking a benchmark for it is a category error &mdash; a benchmark is a set of items and a scoring function, and the token ledger belongs to neither.</p>
+      </div>
+
+      <h3>Vary in doses, not in halves</h3>
+      <p>A baseline and one terse arm can only produce a direction. Three or four increasing degrees of compression produce a curve, and a curve locates the point where language stops compressing for free. That point is the actual finding; the direction alone is an anecdote.</p>
+
+      <h3>Pair everything</h3>
+      <p>Identical scenarios across arms, so each item serves as its own control. Paired comparison absorbs most of the variance from scenario difficulty and from noisy scoring, which matters enormously when the sample is small.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="rail">Spec</div>
+    <div class="body">
+      <h2>What an ideal benchmark must have</h2>
+      <p>Most medical benchmarks cannot run this experiment at all &mdash; not because they are bad, but because they were built to measure something else and are structurally blind to compression. Four properties are disqualifying if absent. Three more decide how much the result can say.</p>
+
+      <div class="req">
+        <div class="mark">R1</div>
+        <div>
+          <h4>The graded artifact is the prose</h4>
+          <p>The scorer must read the words being compressed. If it extracts a label and discards the rest, compression is invisible by construction &mdash; you can cut output by ninety percent and the score will not move, and that is a fact about the instrument, not the model.</p>
+          <p class="test">Test: if the model wrote its answer in a single word, would the score change? If not, the benchmark cannot see this experiment.</p>
+        </div>
+      </div>
+
+      <div class="req">
+        <div class="mark">R2</div>
+        <div>
+          <h4>Length is not itself scored</h4>
+          <p>Any metric based on overlap with a reference text &mdash; ROUGE, BLEU, embedding similarity against a long gold answer &mdash; penalises brevity mechanically, independent of correctness. Such a benchmark will always report that compression hurts, and the report will be an artifact of the scoring function.</p>
+          <p class="test">Test: would a correct one-sentence answer score lower than a correct three-paragraph one? If yes, the metric is measuring length.</p>
+        </div>
+      </div>
+
+      <div class="req">
+        <div class="mark">R3</div>
+        <div>
+          <h4>The task does not use output as scratchpad</h4>
+          <p>If the answer requires arithmetic or multi-step derivation performed in the visible text, compression removes working space rather than filler. The result is real but confounded &mdash; you cannot separate &ldquo;brevity hurt quality&rdquo; from &ldquo;you deleted the calculation.&rdquo;</p>
+          <p class="test">Test: could a competent expert give this answer without showing work? If not, the task is unsuitable.</p>
+        </div>
+      </div>
+
+      <div class="req">
+        <div class="mark">R4</div>
+        <div>
+          <h4>Substance and style are scored separately</h4>
+          <p>The strongest objection to any judged experiment is that judges reward thoroughness, so terse writing loses on taste rather than merit. A multi-dimensional rubric dissolves this: if compression holds the substance dimensions and drops only the style dimension, you have measured the objection instead of arguing about it. This single property does more for interpretability than any other.</p>
+          <p class="test">Test: can you report &ldquo;substance held, style dropped&rdquo; as two numbers rather than one?</p>
+        </div>
+      </div>
+
+      <h3>Then, in order of how much they add</h3>
+
+      <div class="req">
+        <div class="mark">R5</div>
+        <div>
+          <h4>Over-caution is a visible failure mode</h4>
+          <p>The hedging mechanism predicts a specific movement, not just a better score. A benchmark that exposes over-caution &mdash; an &ldquo;uncertain&rdquo; response category, or an over-referral rate &mdash; lets you watch the mechanism operate rather than infer it. This turns a result into an explanation.</p>
+          <p class="test">Test: is there a metric that goes up when the model refuses to commit?</p>
+        </div>
+      </div>
+
+      <div class="req">
+        <div class="mark">R6</div>
+        <div>
+          <h4>Headroom in both directions</h4>
+          <p>A benchmark where strong models already score in the high nineties can only register harm. The theory predicts improvement, so it needs a task with somewhere to improve to. Look for the weakest dimension in a published leaderboard &mdash; that is where an effect can appear.</p>
+          <p class="test">Test: does the best reported model leave meaningful distance to the ceiling?</p>
+        </div>
+      </div>
+
+      <div class="req">
+        <div class="mark">R7</div>
+        <div>
+          <h4>Cheap enough to run four times</h4>
+          <p>Dose-response requires several arms, and a pilot before them. A benchmark affordable once is a benchmark you will run as a binary comparison, which is the weaker design. Cost is not a convenience constraint here &mdash; it directly determines whether you get a curve or a direction.</p>
+          <p class="test">Test: can you afford the pilot plus four arms without hesitating?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="rail">Field</div>
+    <div class="body">
+      <h2>How the candidates score</h2>
+      <p>Seven benchmarks against the four disqualifying requirements. The pattern is worth noticing: nothing fails for being a weak benchmark. Each fails because it was built to measure a different thing.</p>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Benchmark</th>
+              <th class="num">R1 prose</th>
+              <th class="num">R2 length</th>
+              <th class="num">R3 scratchpad</th>
+              <th class="num">R4 split</th>
+              <th class="num">Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HealthBench</td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip mid">partial</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num">Medical primary</td>
+            </tr>
+            <tr>
+              <td>GAMUT</td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip mid">partial</span></td>
+              <td class="num">Non-medical complement</td>
+            </tr>
+            <tr>
+              <td>PatientAgentBench</td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num">Exploratory third</td>
+            </tr>
+            <tr>
+              <td>ClinicBench</td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip no">fail</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip no">fail</span></td>
+              <td class="num">ROUGE penalises brevity</td>
+            </tr>
+            <tr>
+              <td>MedAgentBench</td>
+              <td class="num"><span class="chip no">fail</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip no">fail</span></td>
+              <td class="num">Prose forbidden by prompt</td>
+            </tr>
+            <tr>
+              <td>PubMedQA / MedNLI</td>
+              <td class="num"><span class="chip no">fail</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip no">fail</span></td>
+              <td class="num">Grades one label</td>
+            </tr>
+            <tr>
+              <td>MedCalc-Bench</td>
+              <td class="num"><span class="chip no">fail</span></td>
+              <td class="num"><span class="chip yes">ok</span></td>
+              <td class="num"><span class="chip no">fail</span></td>
+              <td class="num"><span class="chip no">fail</span></td>
+              <td class="num">Answer is arithmetic</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>HealthBench is the medical primary</strong> &mdash; 5,000 multi-turn conversations, physician-written weighted criteria that grade the response rather than extract a label. Its R2 mark is partial and deliberate: the authors report a modest model-specific correlation between response length and score, and the rubric includes explicit response-depth criteria. Used unmodified, its aggregate would tilt against terseness. That is a solvable problem, and solving it is the next section.</p>
+      <p><strong>PatientAgentBench moves to third.</strong> Its six-dimension split is genuinely good, but a compressed agent changes its tool calls and the state of its sandbox, not only its language. That is more than one variable moving. It remains the right instrument for the self-conditioning prediction specifically &mdash; the one mechanism that should compound over sustained multi-turn interaction &mdash; but it cannot carry the primary claim.</p>
+      <p class="note">Two entries in the source landscape review &mdash; RepVig and the Semigran vignettes, both routed through <code>medask/TriageBench</code> &mdash; point at a repository that returns 404, and several of its citations resolve to search pages rather than papers. Treat it as a lead list, not a survey.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="rail">Scoring</div>
+    <div class="body">
+      <h2>The pre-registered substance view</h2>
+      <p>HealthBench tags every criterion with one of five axes. That makes the substance/style separation a filter over existing labels rather than a reinterpretation of the benchmark &mdash; which is what allows it to be declared in advance and audited afterwards.</p>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr><th>Axis</th><th class="num">Criteria (full)</th><th class="num">Criteria (consensus)</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>completeness</td><td class="num">22,285</td><td class="num">319</td><td>Substance</td></tr>
+            <tr><td>accuracy</td><td class="num">18,888</td><td class="num">3,469</td><td>Substance</td></tr>
+            <tr><td>context_awareness</td><td class="num">8,991</td><td class="num">1,986</td><td>Substance</td></tr>
+            <tr><td>instruction_following</td><td class="num">2,551</td><td class="num">575</td><td>Substance</td></tr>
+            <tr><td>communication_quality</td><td class="num">4,522</td><td class="num">1,704</td><td>Style &mdash; reported separately</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="caption">Counts read directly from the released rubric tags.</p>
+      <p>Three numbers get declared before the run, not chosen after it.</p>
+      <h3>Primary &mdash; substance</h3>
+      <p>Accuracy, completeness, context awareness and instruction following. Communication-quality criteria and the response-depth criteria are excluded. This is the headline, and it is close to compression-neutral by construction.</p>
+      <h3>Secondary &mdash; style and depth</h3>
+      <p>The excluded criteria, reported openly rather than discarded. If compressed answers cost the reader something, this is where it shows, and hiding it would make the primary claim dishonest rather than clean.</p>
+      <h3>Mechanism slices</h3>
+      <p>The Consensus subset carries 37 clusters, and three of them form a built-in test of the hedging hypothesis &mdash; with its own control arm.</p>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr><th>Cluster</th><th class="num">Criteria</th><th>Prediction if the theory holds</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>hedging_no-uncertainty</td><td class="num">228</td><td>Hedging <strong>falls</strong>. Nothing was uncertain; the hedge was evasion.</td></tr>
+            <tr><td>hedging_any-reducible-uncertainty</td><td class="num">285</td><td>Hedging and context-seeking <strong>hold</strong>. Falling here is harm.</td></tr>
+            <tr><td>hedging_only-irreducible-uncertainty</td><td class="num">198</td><td>Hedging <strong>holds</strong>. Falling here is harm.</td></tr>
+            <tr><td>emergency_referrals_emergent</td><td class="num">139</td><td>Under-referral does not rise.</td></tr>
+            <tr><td>emergency_referrals_non-emergent</td><td class="num">134</td><td>Over-referral may fall &mdash; defensive escalation is a hedge.</td></tr>
+            <tr><td>context_seeking_not-enough-context</td><td class="num">181</td><td>Asking for missing context holds. Brevity must not become guessing.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>This structure is what makes HealthBench the right primary. It does not merely permit the hedging hypothesis to be tested &mdash; it ships the falsification alongside it. A result showing hedging down everywhere is not a win; it is compression destroying appropriate caution. The theory only survives if hedging falls where nothing is uncertain <em>and</em> holds where something is.</p>
+      <h3>The non-medical complement</h3>
+      <p>Running the same arms on GAMUT&rsquo;s text-only variant tests whether any effect is about medicine or about language. It compiles human-verified answer requirements into independent binary content checks with no reference-answer overlap &mdash; structurally the closest existing thing to the checklist instrument described below &mdash; and at a best published score near 59% it is nowhere near ceiling. It carries no hedging measure, so it broadens the result without explaining it.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="rail">Gap</div>
+    <div class="body">
+      <h2>The instrument that would settle it</h2>
+      <p>The ideal grader for this theory checks for <strong>the presence of required content, not the quality of the writing around it.</strong> Each required element is either there or it is not. That check is compression-neutral by construction: a fragment carrying all four required elements scores exactly as a florid paragraph carrying all four, and padding earns nothing.</p>
+      <p>Two existing benchmarks approach this from different directions. HealthBench&rsquo;s per-criterion rubric is close in spirit &mdash; each criterion is a specific thing the response should or should not contain &mdash; but it is graded by a model rather than checked, and a handful of its criteria are explicitly about depth. GAMUT is closer in form, with independent human-verified content checks and no reference overlap, but it sits outside medicine and carries no measure of over-caution.</p>
+      <p>The purpose-built version would be clinical safety-netting: given a scenario, does the response name the red-flag symptoms warranting escalation, the timeframe, where to go, and what to do if things worsen? Four binary checks, no jury, and over-caution visible as elements asserted where the scenario does not warrant them. It would satisfy every requirement at once and cost almost nothing to run.</p>
+      <p>It does not exist. Building it means roughly a hundred scenarios and their checklists &mdash; real work, but the kind that yields an instrument rather than a single result. The landscape review that prompted this document names the same gap independently and rates it highly tractable.</p>
+      <div class="claim">
+        <p>Until it exists, HealthBench with a pre-registered substance-only view is the strongest available instrument, and its model-graded scoring is a limitation to state plainly rather than design around.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="rail">Outcomes</div>
+    <div class="body">
+      <h2>What any of this can conclude</h2>
+      <p>The design has no null result, which is a property worth stating up front rather than discovering afterwards.</p>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr><th>Observation</th><th>Conclusion</th><th class="num">Strength</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Substance flat, style down, output tokens far down</td>
+              <td>Compression is free. The verbosity was serving the reader&rsquo;s expectations, not the answer&rsquo;s quality.</td>
+              <td class="num"><span class="chip yes">Solid</span></td>
+            </tr>
+            <tr>
+              <td>Substance up, over-caution down</td>
+              <td>Compression is a forcing function. Banning hedged language removed hedged judgement.</td>
+              <td class="num"><span class="chip yes">Strong</span></td>
+            </tr>
+            <tr>
+              <td>Quality holds at moderate compression, breaks at extreme</td>
+              <td>Language compresses a long way for free and then abruptly stops. The location of that break is the finding.</td>
+              <td class="num"><span class="chip mid">Curve</span></td>
+            </tr>
+            <tr>
+              <td>Quality falls monotonically from the first arm</td>
+              <td>The redundancy was load-bearing. Worth reporting, and worth checking against R3 before believing.</td>
+              <td class="num"><span class="chip mid">Negative</span></td>
+            </tr>
+            <tr>
+              <td>Reasoning tokens fall alongside output tokens</td>
+              <td>No conclusion. The manipulation failed and the arms are not comparable.</td>
+              <td class="num"><span class="chip no">Void</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Note the last row is the only one that yields nothing &mdash; and it is a failure of execution rather than of the theory. Everything else, including the negative result, says something about how much of a model&rsquo;s speech is doing work.</p>
+      <h3>The claim this design can defend</h3>
+      <div class="claim" style="font-size:1rem;">
+        <p>On HealthBench, with inference settings held fixed, constraining visible output preserved or improved clinical substance on paired items, while separately measured communication and depth moved by a stated amount. The effect concentrated in no-uncertainty and information-selection cases, and appropriate hedging did not fall where the uncertainty was real.</p>
+      </div>
+      <p>That sentence is falsifiable in four independent places, which is what separates it from a preference for short writing.</p>
+    </div>
+  </section>
+
+  <footer>
+    Method note &middot; Compression as a constraint on expression, not computation
+  </footer>
+
+</div>

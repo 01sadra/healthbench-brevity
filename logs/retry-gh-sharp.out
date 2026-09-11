@@ -1,0 +1,1751 @@
+Monitor from another shell: inspect ctl task list   (inspect ctl --help)
+Running 1 tasks...
+---------------------------------------------------------                       
+global_health_sharp_routing_noprior (300 samples): anthropic/claude-sonnet-5    
+reasoning_effort: medium, brevity: sharp_routing_noprior, theme: global_health, 
+judge_model: openai/gpt-4.1-2025-04-14, per_slice: 100, dataset: (samples)      
+---------------------------------------------------------                       
+                                                                                
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+generate     | Steps: 188/300  62% | Samples: 188/300 | mean: 1.00 | anthropic:  0/20, openai: 25/10000 | HTTP retries: 0
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918aa60e6c81909c0ce96c587e4b8b with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:16
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:31
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:46
+[08/28/26 14:19:31] WARNING  sample=183                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=204                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:19:32] WARNING  sample=205                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=206                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=207                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:19:33] WARNING  sample=184                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=185                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=186                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:19:34] WARNING  sample=187                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=188                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=189                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:19:35] WARNING  sample=190                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=191                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:19:36] WARNING  sample=192                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=193                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:19:37] WARNING  sample=194                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=195                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=196                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:19:38] WARNING  sample=197                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=198                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:19:39] WARNING  sample=199                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=200                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:19:40] WARNING  sample=201                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=202                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=203                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918aeddc5081909bb1e225a43c31a0 with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:16
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:31
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:46
+[08/28/26 14:20:43] WARNING  sample=183                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=204                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=205                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=206                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=207                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=184                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=185                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=186                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=187                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=188                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=189                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=190                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=191                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=192                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=193                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=194                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=195                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=196                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=197                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=198                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=199                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=200                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=201                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=202                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=203                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918b2cbfa48190b44c97a1751595e4 with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:16
+[08/28/26 14:21:15] WARNING  sample=183                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=204                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=205                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+generate     | Steps: 189/300  63% | Samples: 188/300 | mean: 1.00 | anthropic:  0/20, openai: 22/10000 | HTTP retries: 3
+                    WARNING  sample=206                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=207                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=184                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=185                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=186                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=187                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=188                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=189                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=190                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=191                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=192                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=193                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=194                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=195                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=196                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=197                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=198                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=199                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=200                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=201                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=202                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=203                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+generate     | Steps: 213/300  71% | Samples: 213/300 | mean: 0.93 | anthropic:  0/20, openai: 25/10000 | HTTP retries: 3
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918b5be12c81908874a509809a5f55 with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:15
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:30
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:45
+[08/28/26 14:22:32] WARNING  sample=208                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=209                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=210                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=211                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=212                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=213                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=214                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:22:33] WARNING  sample=215                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=216                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=217                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=218                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=219                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=220                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=221                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=222                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=224                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=225                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=226                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=227                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=228                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=229                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=230                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=231                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=232                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=233                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918b9b596881909661f3363ddec203 with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:15
+[08/28/26 14:23:06] WARNING  sample=208                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=209                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=210                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=211                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=212                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=213                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=214                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=215                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=216                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=217                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=218                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=219                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=220                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=221                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=222                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=224                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=225                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=226                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=227                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=228                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=229                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=230                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=231                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=232                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=233                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918bbb45788190b6f352ce8000ebdc with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:15
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:30
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:46
+[08/28/26 14:24:08] WARNING  sample=208                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=209                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=210                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+generate     | Steps: 214/300  71% | Samples: 213/300 | mean: 0.93 | anthropic:  0/20, openai: 22/10000 | HTTP retries: 6
+                    WARNING  sample=211                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=212                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=213                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=214                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=215                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=216                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=217                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=218                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=219                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=220                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=221                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=222                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=224                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=225                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=226                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=227                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=228                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=229                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:24:09] WARNING  sample=230                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=231                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=232                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=233                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+generate     | Steps: 238/300  79% | Samples: 238/300 | mean: 0.93 | anthropic:  0/20, openai: 25/10000 | HTTP retries: 6
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918c08be988190b10649462475d567 with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:16
+[08/28/26 14:24:55] WARNING  sample=234                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=235                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=236                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=237                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=238                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=239                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=240                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=241                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=242                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=243                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=244                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=245                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=246                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=247                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=248                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=249                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=250                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=251                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=252                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=253                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=254                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=255                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=256                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=257                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=258                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918c28bd308190b60065e3b6b7d891 with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:16
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:31
+[08/28/26 14:25:42] WARNING  sample=234                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=235                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=236                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=237                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=238                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=239                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=240                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=241                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=242                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=243                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=244                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=245                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=246                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=247                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=248                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=249                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=250                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=251                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=252                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=253                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=254                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:25:43] WARNING  sample=255                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=256                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=257                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=258                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918c57f6288190994e539cf6556a46 with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:15
+[08/28/26 14:26:14] WARNING  sample=234                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=235                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=236                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+generate     | Steps: 239/300  79% | Samples: 238/300 | mean: 0.93 | anthropic:  0/20, openai: 22/10000 | HTTP retries: 9
+                    WARNING  sample=237                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=238                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=239                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=240                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=241                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=242                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=243                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=244                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=245                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=246                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=247                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=248                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=249                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=250                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=251                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=252                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:26:15] WARNING  sample=253                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=254                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=255                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=256                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=257                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=258                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+generate     | Steps: 263/300  87% | Samples: 263/300 | mean: 0.94 | anthropic:  0/20, openai: 25/10000 | HTTP retries: 9
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918c86e5fc8190af61d1898ebf6265 with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:15
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:30
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:46
+[08/28/26 14:27:32] WARNING  sample=259                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=260                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=261                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=262                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=263                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=265                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=266                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=267                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=268                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=269                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=270                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=272                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=273                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=274                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=275                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=276                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=277                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=278                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=279                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=280                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=281                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=282                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=284                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=285                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=286                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918cc572c881908563cf59f85dc18e with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:15
+[08/28/26 14:28:04] WARNING  sample=259                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=260                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=261                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=262                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=263                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=265                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=266                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=267                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=268                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=269                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=270                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=272                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=273                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=274                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=275                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=276                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=277                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=278                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=279                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=280                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=281                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=282                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=284                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=285                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=286                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918ce516f08190980a9c00bc8c9a0e with 25 requests
+Current batches: 1, requests (pending/completed/failed): 25/0/0, oldest batch age: 0:00:15
+[08/28/26 14:28:35] WARNING  sample=259                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=260                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=261                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+generate     | Steps: 264/300  88% | Samples: 263/300 | mean: 0.94 | anthropic:  0/20, openai: 22/10000 | HTTP retries: 12
+                    WARNING  sample=262                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=263                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=265                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=266                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=267                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=268                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=269                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=270                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=272                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=273                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=274                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=275                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=276                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=277                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+[08/28/26 14:28:36] WARNING  sample=278                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=279                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=280                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=281                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=282                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=284                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=285                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=286                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+generate     | Steps: 288/300  96% | Samples: 288/300 | mean: 0.94 | anthropic: 10/20, openai:  2/10000 | HTTP retries: 12
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918d140d408190a90f27912dddf222 with 12 requests
+Current batches: 1, requests (pending/completed/failed): 12/0/0, oldest batch age: 0:00:15
+[08/28/26 14:29:22] WARNING  sample=288                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=290                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=292                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=291                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=293                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=300                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=299                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=295                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=296                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=298                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=294                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=297                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918d3370c4819092f401aa5caa2d74 with 12 requests
+Current batches: 1, requests (pending/completed/failed): 12/0/0, oldest batch age: 0:00:15
+[08/28/26 14:29:54] WARNING  sample=288                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=290                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=292                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=291                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=293                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=300                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=299                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=295                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=296                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=298                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=294                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=297                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918d53458881908099f2f318fbd38b with 12 requests
+Current batches: 1, requests (pending/completed/failed): 12/0/0, oldest batch age: 0:00:15
+[08/28/26 14:30:26] WARNING  sample=288                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=290                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=292                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+generate     | Steps: 289/300  96% | Samples: 288/300 | mean: 0.94 | anthropic:  0/20, openai:  9/10000 | HTTP retries: 15
+                    WARNING  sample=291                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=293                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=300                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=299                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=295                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=296                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=298                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=294                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=297                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918d735c408190a1e0a09eb54cb352 with 8 requests
+Current batches: 1, requests (pending/completed/failed): 8/0/0, oldest batch age: 0:00:15
+Created batch batch_6a918d83427c8190bbb4654ae56a6948 with 3 requests
+Current batches: 2, requests (pending/completed/failed): 11/0/0, oldest batch age: 0:00:31
+Current batches: 2, requests (pending/completed/failed): 11/0/0, oldest batch age: 0:00:46
+[08/28/26 14:31:29] WARNING  sample=290                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=292                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=291                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=293                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=300                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=299                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=295                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=296                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 1, requests (pending/completed/failed): 3/0/0, oldest batch age: 0:00:46
+Created batch batch_6a918db1e41081909a90c5ab64dcf217 with 8 requests
+[08/28/26 14:31:45] WARNING  sample=298                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=294                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=297                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 1, requests (pending/completed/failed): 8/0/0, oldest batch age: 0:00:15
+Created batch batch_6a918dc1e1d08190a3a191e3a470eccb with 3 requests
+[08/28/26 14:32:01] WARNING  sample=290                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=292                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=291                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=293                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=300                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=299                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=295                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=296                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 1, requests (pending/completed/failed): 3/0/0, oldest batch age: 0:00:15
+Created batch batch_6a918dd1f490819085df2833b3a810e6 with 8 requests
+Current batches: 2, requests (pending/completed/failed): 11/0/0, oldest batch age: 0:00:31
+[08/28/26 14:32:32] WARNING  sample=290                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=292                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=291                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=293                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=300                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=299                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=295                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=296                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 1, requests (pending/completed/failed): 3/0/0, oldest batch age: 0:00:46
+Created batch batch_6a918df17854819099ac5b28ff2cdb28 with 5 requests
+[08/28/26 14:32:48] WARNING  sample=298                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=294                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=297                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 1, requests (pending/completed/failed): 5/0/0, oldest batch age: 0:00:15
+Created batch batch_6a918e018b4481908847c97a4b784f06 with 6 requests
+Current batches: 2, requests (pending/completed/failed): 11/0/0, oldest batch age: 0:00:32
+[08/28/26 14:33:20] WARNING  sample=299                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=295                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=296                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=298                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=294                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=297                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 1, requests (pending/completed/failed): 5/0/0, oldest batch age: 0:00:47
+Created batch batch_6a918e2198208190af95e7fbef3e46a0 with 3 requests
+[08/28/26 14:33:37] WARNING  sample=290                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=292                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=291                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=293                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=300                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 1, requests (pending/completed/failed): 3/0/0, oldest batch age: 0:00:16
+Created batch batch_6a918e31cd2481908438f86c6e6cc229 with 8 requests
+Current batches: 2, requests (pending/completed/failed): 11/0/0, oldest batch age: 0:00:32
+Current batches: 2, requests (pending/completed/failed): 11/0/0, oldest batch age: 0:00:47
+[08/28/26 14:34:23] WARNING  sample=299                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=295                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=296                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 1, requests (pending/completed/failed): 8/0/0, oldest batch age: 0:00:46
+Created batch batch_6a918e6078248190a72347b383805ab6 with 3 requests
+[08/28/26 14:34:39] WARNING  sample=298                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=294                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=297                            scorer.py:554
+                             Grading attempt 1 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=290                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=292                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=291                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=293                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=300                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 1, requests (pending/completed/failed): 3/0/0, oldest batch age: 0:00:15
+Created batch batch_6a918e70946c81908a6ed234afa3ee6b with 8 requests
+[08/28/26 14:34:56] WARNING  sample=299                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=295                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=296                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+generate     | Steps: 290/300  96% | Samples: 289/300 | mean: 0.95 | anthropic:  0/20, openai:  8/10000 | HTTP retries: 26
+Current batches: 1, requests (pending/completed/failed): 8/0/0, oldest batch age: 0:00:16
+generate     | Steps: 292/300  97% | Samples: 292/300 | mean: 0.94 | anthropic:  0/20, openai:  8/10000 | HTTP retries: 26
+Current batches: 1, requests (pending/completed/failed): 8/0/0, oldest batch age: 0:00:31
+Current batches: 1, requests (pending/completed/failed): 8/0/0, oldest batch age: 0:00:46
+[08/28/26 14:35:41] WARNING  sample=298                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=294                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=297                            scorer.py:554
+                             Grading attempt 2 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=290                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=292                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=291                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+generate     | Steps: 293/300  97% | Samples: 292/300 | mean: 0.94 | anthropic:  0/20, openai:  5/10000 | HTTP retries: 26
+                    WARNING  sample=293                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=300                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+Created batch batch_6a918eaeb87c819098adff0aa3d5fcd5 with 3 requests
+generate     | Steps: 297/300  99% | Samples: 297/300 | mean: 0.94 | anthropic:  0/20, openai:  3/10000 | HTTP retries: 27
+Current batches: 1, requests (pending/completed/failed): 3/0/0, oldest batch age: 0:00:16
+[08/28/26 14:36:13] WARNING  sample=298                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=294                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+                    WARNING  sample=297                            scorer.py:554
+                             Grading attempt 3 failed: Batch                    
+                             rejected: error information could not              
+                             be determined                                      
+generate     | Steps: 298/300  99% | Samples: 297/300 | mean: 0.94 | anthropic:  0/20, openai:  0/10000 | HTTP retries: 27
+Current batches: 0, requests (pending/completed/failed): 0/0/0, oldest batch age: 0:00:00
+generate     | Steps: 300/300 100% | Samples: 300/300 | mean: 0.92 | anthropic:  0/20, openai:  0/10000 | HTTP retries: 27
+
+---------------------------------------------------------                       
+global_health_sharp_routing_noprior (300 samples): anthropic/claude-sonnet-5    
+reasoning_effort: medium, brevity: sharp_routing_noprior, theme: global_health, 
+judge_model: openai/gpt-4.1-2025-04-14, per_slice: 100, dataset: (samples)      
+total time:                0:18:02                                              
+openai/gpt-4.1-2025-04-14  621,004 tokens [I: 568,214, CW: 0, CR: 0, O: 52,790, 
+                         R: 0]                                                  
+anthropic/claude-sonnet-5  210,852 tokens [I: 83,195, CW: 10,326, CR: 0, O:     
+                         117,331, R: 15,165]                                    
+substance             accuracy         completeness       context_awaren…       
+mean           0.913  mean      0.970  mean          nan  mean             0.885
+stderr         0.016  stderr    0.017  stderr        nan  stderr           0.023
+context-matt…  0.900                                                            
+context-does…  0.970                                                            
+context-matt…  0.870                                                            
+communication_quality         instruction_following                             
+mean                   0.607  mean                   nan                        
+stderr                 0.028  stderr                 nan                        
+Log:                                                                            
+logs/2026-08-28T13-18-11-00-00_global-health-sharp-routing-noprior_oR9sKxEPpLEQ…
+---------------------------------------------------------                       
+                                                                                

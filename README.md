@@ -16,8 +16,8 @@ visible answer — does answer quality survive, in a medical context?**
   uses for HealthBench. (An earlier pass used `gpt-4o-mini`; superseded, logs kept.)
 - **Design:** paired. Every arm sees the identical 300 items in file order, so
   every comparison is within-item. n=300 per arm.
-- **Manipulation:** one system message, nothing else. Arm texts are verbatim in
-  the `BREVITY` dict in `hedging_brevity.py`.
+- **Manipulation:** one system message, nothing else. Every arm's prompt,
+  verbatim: [`PROMPTS.md`](PROMPTS.md).
 - **Themes:** `hedging` (responding with uncertainty), `emergency` (emergency
   referrals), `global_health`. Each theme = 3 slices × 100 items.
 - **Cost:** ~$18, personal budget and personal time.
@@ -64,6 +64,7 @@ Read that before trusting anything here.
 
 | path | what |
 |---|---|
+| `PROMPTS.md` | every arm's system prompt, verbatim |
 | `hedging_brevity.py` | the eval task — arms, slices, six per-axis scorers |
 | `verify.py` | offline recompute of every published number |
 | `brevity_eval.py`, `medcalc_triage.py` | earlier/adjacent probes |

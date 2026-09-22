@@ -1,5 +1,7 @@
 # Brevity experiment — handoff context
 
+> **Superseded (2026-09-22)** for results — the emergency mechanism in §5 is wrong (see [`ARTICLE-NUMBERS.md`](ARTICLE-NUMBERS.md) Claim 2). Kept for setup, history and guardrails.
+
 Everything an incoming agent needs. Written 2026-08-26.
 
 ---

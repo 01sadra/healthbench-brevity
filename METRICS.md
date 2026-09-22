@@ -1,5 +1,7 @@
 # Metrics log — what we measure and why
 
+> **Superseded (2026-09-22).** Round-one hedging metrics; values still reproduce. Current numbers: [`ARTICLE-NUMBERS.md`](ARTICLE-NUMBERS.md).
+
 One page. Every metric in the project, what it answers, current value, and
 what would count as a change. Reference grader = gpt-4.1-2025-04-14,
 n=300/arm, paired (identical items across arms).

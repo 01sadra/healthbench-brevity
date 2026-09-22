@@ -25,6 +25,7 @@ Reference implementation: https://github.com/openai/simple-evals
 
 import asyncio
 import json
+import logging
 from pathlib import Path
 from typing import Any, Literal
 
@@ -43,7 +44,13 @@ from inspect_ai.solver import TaskState, generate, system_message
 
 # The scorer helpers are ports of the reference implementation; reused rather
 # than reimplemented so the grading matches HealthBench exactly.
-from inspect_evals.healthbench.scorer import _evaluate_criterion, calculate_score
+from inspect_evals.healthbench.scorer import (
+    GRADER_TEMPLATE,
+    calculate_score,
+    parse_json_to_dict,
+)
+
+logger = logging.getLogger(__name__)
 
 CONSENSUS_URL = (
     "https://openaipublic.blob.core.windows.net/simple-evals/healthbench/"
@@ -182,6 +189,44 @@ def _conversation(state: TaskState) -> str:
     return "\n\n".join(lines)
 
 
+async def _grade_criterion(
+    judge: Model, rubric: dict[str, Any], conversation: str, attempts: int = 3
+) -> bool | None:
+    """Grade one criterion. Returns None if the judge never gave a verdict.
+
+    Same judge call as inspect_evals' _evaluate_criterion (template, config,
+    cache=True -- so re-grades hit the existing judge cache), with one
+    difference: that helper turns a judge failure into criteria_met=False,
+    i.e. "the answer failed this criterion". A rejected OpenAI batch did
+    exactly that to 134 criteria in the global_health sharp_routing_noprior
+    run and produced a fake 0.980 -> 0.607. A failure is missing data, not
+    a verdict. Retries bypass the cache: a cached unparseable reply would
+    otherwise just be replayed on every attempt.
+    """
+    prompt = GRADER_TEMPLATE.replace("<<conversation>>", conversation).replace(
+        "<<rubric_item>>", f"[{rubric['points']}] {rubric['criterion']}"
+    )
+    for attempt in range(attempts):
+        try:
+            response = await judge.generate(
+                input=prompt,
+                config=GenerateConfig(
+                    temperature=0.0,
+                    max_tokens=None,
+                    system_message="You are a helpful assistant.",
+                ),
+                cache=attempt == 0,
+            )
+        except Exception as e:
+            logger.warning(f"judge attempt {attempt + 1} raised: {e}")
+            continue
+        label = parse_json_to_dict(response.completion).get("criteria_met")
+        if isinstance(label, bool):
+            return label
+        logger.warning(f"judge attempt {attempt + 1} gave no criteria_met")
+    return None
+
+
 def _axis_scorer(name: str, axes: set[str], group: bool) -> Any:
     metrics: list[Any] = [mean(), stderr()]
     if group:
@@ -201,19 +246,25 @@ def _axis_scorer(name: str, axes: set[str], group: bool) -> Any:
                 return Score(value=float("nan"), explanation="no criteria on this axis")
 
             conversation = _conversation(state)
-            gradings = await asyncio.gather(
-                *(_evaluate_criterion(judge, r, conversation) for r in rubrics)
+            verdicts = await asyncio.gather(
+                *(_grade_criterion(judge, r, conversation) for r in rubrics)
             )
-            # _evaluate_criterion returns the verdict under "met"; calculate_score
-            # reads "criteria_met". Bridge the two rather than reimplementing the
-            # reference scoring maths.
-            graded = [{"criteria_met": bool(g.get("met", False))} for g in gradings]
+            failed = sum(1 for v in verdicts if v is None)
+            if failed:
+                # Any ungraded criterion makes the item's score unknowable --
+                # NaN, so paired analysis drops it instead of scoring it 0.
+                return Score(
+                    value=float("nan"),
+                    explanation=f"judge failed on {failed}/{len(rubrics)} criteria",
+                    metadata={"n_criteria": len(rubrics), "judge_failed": failed},
+                )
+            graded = [{"criteria_met": v} for v in verdicts]
             value = calculate_score(rubrics, graded)
-            met = sum(1 for g in graded if g["criteria_met"])
+            met = sum(1 for v in verdicts if v)
             return Score(
                 value=float("nan") if value is None else value,
                 explanation=f"{met}/{len(rubrics)} criteria met",
-                metadata={"n_criteria": len(rubrics)},
+                metadata={"n_criteria": len(rubrics), "judge_failed": 0},
             )
 
         return score

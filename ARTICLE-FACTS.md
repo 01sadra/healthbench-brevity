@@ -1,5 +1,7 @@
 # Numbers for the article
 
+> **Superseded (2026-09-22).** Its headline — sharp/compression 0.980 → 0.607 on communication quality — was a judge failure, and its emergency mechanism is wrong. Current numbers: [`ARTICLE-NUMBERS.md`](ARTICLE-NUMBERS.md).
+
 Two new themes finished 2026-08-28. Everything below is n=300 per arm, paired
 (same items in every arm), graded by gpt-4.1-2025-04-14. Model under test:
 claude-sonnet-5, reasoning_effort=medium, pinned identical across arms.

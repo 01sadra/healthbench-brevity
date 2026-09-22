@@ -1,5 +1,30 @@
 # Verification handoff
 
+> ## Result — verified 2026-09-22
+>
+> An independent re-derivation (raw `.eval` zips, every judge verdict
+> re-parsed, every item rescored from rubric points — no `verify.py`, no
+> inspect_ai) was run against this brief. Summary; full record in
+> [`ARTICLE-NUMBERS.md`](ARTICLE-NUMBERS.md#verification-record-2026-09-22).
+>
+> - **Broke:** Claim 1's 0.980 → 0.607. OpenAI's Batch API rejected 134
+>   grading requests in the global-health compression log; the scorer counted
+>   each as "not met". 111 of the 113 "worse" items. Failures dropped:
+>   0.973 → 0.968, ns. Fixed in `hedging_brevity.py` and `verify.py`;
+>   the 112 items still need re-grading.
+> - **Held, mechanism corrected:** Claim 2's +0.115 survives Bonferroni and Holm
+>   over the 67-test family. But the gain is the "no unnecessary follow-up
+>   questions" criterion (77 → 99 met), not the referral-first/verbosity one
+>   (91 → 92). The §4 rubric language exists; it just isn't what moved.
+> - **Held:** Claim 3 (0.930 → 0.500, 0/43/57); the hedging numbers from
+>   round one; oracle 0.931 / ceiling 0.977 / 111 of 300; the cheap-judge
+>   contrast (−0.098 vs −0.013).
+> - **Demoted:** completeness −0.060 / −0.065 does not survive correction.
+>   "Never above 70%" routing becomes 73% if `only-irreducible` is counted.
+> - **Clean:** canonical map, prompts sent, pairing, slice grouping, NaN
+>   handling, stored scores (0 mismatches against the rescore).
+> - **Still unverifiable:** the four judge-audit percentages (§7).
+
 You are being asked to **attack** the numbers in `ARTICLE-NUMBERS.md`. They are
 going into a public Substack article about health-AI evaluation. Assume they are
 wrong until you have recomputed them yourself. I wrote them; I am not a
@@ -41,7 +66,7 @@ a pipeline treat NaN as 0, that is a bug and it would change everything.
 ## 2. Run this first
 
 ```bash
-cd "/Users/sadra/Extended Memory/Projects/health BM Caveman" && .venv/bin/python verify.py
+.venv/bin/python verify.py
 ```
 
 I wrote `verify.py` for you today. It reads the stored logs only — offline,

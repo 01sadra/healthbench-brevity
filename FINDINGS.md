@@ -1,5 +1,7 @@
 # Brevity experiment — findings (reference-grader final)
 
+> **Superseded (2026-09-22).** Hedging theme only; predates the emergency and global-health runs. Current numbers: [`ARTICLE-NUMBERS.md`](ARTICLE-NUMBERS.md).
+
 Run: 2026-08-20/21. **n=300 per arm, complete, re-graded with the reference
 grader.** Model under test: claude-sonnet-5, `reasoning_effort=medium`.
 Grader: **gpt-4.1-2025-04-14** (the grader OpenAI's simple-evals uses for

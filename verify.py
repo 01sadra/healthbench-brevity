@@ -16,15 +16,22 @@ Every reported figure is derived from three primitives and nothing else:
                                            empty for cached generations
   ask     "?" in completion             -- the ask-rate proxy
 
+Judge failures: a criterion the judge never returned a verdict for (e.g. a
+rejected OpenAI batch) was scored "not met" by the original scorer. Those
+items are set to NaN here -- dropped pairwise, like any unmeasured axis.
+134 criteria in the global_health sharp_routing_noprior log are affected.
+Pass --as-published to reproduce the original, uncorrected numbers.
+
 Pairing is by sample.id, which is the HealthBench record index and is
 identical across arms because every arm runs the same dataset in file order.
 """
 
 import argparse
+import json
 import math
 import os
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from statistics import mean
 
 from inspect_ai.log import list_eval_logs, read_eval_log
@@ -56,17 +63,53 @@ CANONICAL = {
 }
 
 
+AS_PUBLISHED = False
+
+
+def _verdict(text):
+    """criteria_met from a judge reply, or None if there is no usable one."""
+    m = re.search(r"\{.*\}", text or "", re.S)
+    try:
+        v = json.loads(m.group(0)).get("criteria_met") if m else None
+    except (json.JSONDecodeError, AttributeError):
+        return None
+    return v if isinstance(v, bool) else None
+
+
+def judge_failures(sample):
+    """Per scorer: criteria that never got a verdict from the judge.
+
+    Each criterion is retried until it gets a verdict, so criteria graded =
+    judge calls with a usable verdict; the rest of n_criteria failed.
+    """
+    spans = {e.id: e.name for e in sample.events
+             if e.event == "span_begin" and getattr(e, "type", None) == "scorer"}
+    graded = Counter(spans[e.span_id] for e in sample.events
+                     if e.event == "model" and e.span_id in spans
+                     and _verdict(e.output.completion) is not None)
+    failed = {}
+    for ax, score in sample.scores.items():
+        n = (score.metadata or {}).get("n_criteria", 0)
+        if n and graded[ax] < n:
+            failed[ax] = n - graded[ax]
+    return failed
+
+
 def load(basename):
     log = read_eval_log(os.path.join("logs", basename))
     assert log.status == "success", f"{basename} status={log.status}"
     rows = {}
     for s in log.samples:
+        failed = judge_failures(s)
         rows[s.id] = {
             "slice": s.metadata["slice"],
             "chars": len(s.output.completion),
             "ask": "?" in s.output.completion,
             "text": s.output.completion,
-            **{ax: (s.scores[ax].value if ax in s.scores else float("nan")) for ax in AXES},
+            "judge_failed": failed,
+            **{ax: (s.scores[ax].value
+                    if ax in s.scores and (AS_PUBLISHED or ax not in failed)
+                    else float("nan")) for ax in AXES},
         }
     return log, rows
 
@@ -115,6 +158,11 @@ def report(theme, arms):
 
     print(f"\n{'=' * 78}\nTHEME: {theme}\n{'=' * 78}")
     print(f"slices: {slices}")
+    for arm, rows in loaded.items():
+        bad = Counter(ax for r in rows.values() for ax in r["judge_failed"])
+        if bad:
+            how = "scored as not met (--as-published)" if AS_PUBLISHED else "set to NaN"
+            print(f"JUDGE FAILURES in {arm}: items per scorer {dict(bad)} -- {how}")
 
     print("\n-- length and ask-rate (all samples) --")
     print(f"{'arm':<24}{'n':>5}{'chars':>9}{'ask%':>7}")
@@ -236,7 +284,10 @@ def routing_and_oracle():
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--theme", default=None)
+    ap.add_argument("--as-published", action="store_true",
+                    help="keep judge failures scored as 'not met' (the original, wrong numbers)")
     args = ap.parse_args()
+    AS_PUBLISHED = args.as_published
     themes = [args.theme] if args.theme else ["hedging", "emergency", "global_health"]
     arms = ["none", "terse", "sharp", "sharp_routing", "sharp_routing_noprior"]
     for th in themes:

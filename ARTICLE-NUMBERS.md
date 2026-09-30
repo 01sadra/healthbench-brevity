@@ -10,6 +10,14 @@ Three themes run: Responding with uncertainty, Emergency referrals, Global healt
 300 conversations each — **900 questions, 3,300 graded answers** (5 arms on
 uncertainty, 3 on the other two). Four of five rubric axes measured. ~$18 total.
 
+**Sampling:** not random — the first 100 conversations of each sub-slice, in the
+order of OpenAI's published Consensus file. Deterministic, no seed, identical
+across arms. Sub-slices are weighted equally, so "ALL" rows average three equal
+sub-slices rather than representing the theme. Checked 2026-09-30: the file is
+not sorted by theme (each theme spans positions 1–3,670), the chosen 100 cover
+35–75% of their sub-slice, and match the remainder on turns (e.g. 2.38 vs 2.43),
+prompt length and non-English share.
+
 Every number below is printed by `verify.py` (offline, from `logs/`), and was
 independently re-derived from the raw judge verdicts on 2026-09-22 — see
 [Verification record](#verification-record-2026-09-22).

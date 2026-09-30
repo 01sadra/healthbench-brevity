@@ -21,6 +21,15 @@ visible answer — does answer quality survive, in a medical context?**
 - **Themes:** `hedging` (responding with uncertainty), `emergency` (emergency
   referrals), `global_health`. Each theme = 3 slices × 100 items — 900
   questions, 3,300 graded answers.
+- **Sampling:** not random. For each theme, the first 100 conversations of each
+  of its three sub-slices, in the order of OpenAI's published Consensus file
+  (`consensus_2025-05-09-20-00-46.jsonl`) — `per_slice=100` in
+  `hedging_brevity.py`. Deterministic, no seed, identical across arms. The file
+  is not sorted by theme, and the chosen items match the rest of their
+  sub-slice on turn count, prompt length and language; whether OpenAI's file
+  order tracks anything else was not checked. Sub-slices are weighted equally
+  (100 each) regardless of their real sizes, so a theme's "ALL" figure is the
+  mean of three equal sub-slices, not a representative theme average.
 - **Cost:** ~$18, personal budget and personal time.
 
 Arms: `none` (control) · `terse` ("be brief") · `sharp_routing_noprior`
